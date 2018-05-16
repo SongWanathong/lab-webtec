@@ -36,3 +36,188 @@ footer{
     text-align: center;
     margin-left: 2em;
 }
+
+@media screen and (min-width: 380px) and (max-width: 619px){
+    main {
+        grid-template: auto / 2fr 2fr;
+        grid-template-areas:
+            "teaching research"
+            "books photos"
+            "me contact";
+        grid-gap: 1.2em;
+    }
+    header {
+        margin-bottom: 0.6em;
+        font-size: var(--min-title-size);
+    }
+    footer {
+        grid-template-rows: 1fr 1fr;
+    }
+    .contactLogo {
+        width: 48px;
+        height: 48px;
+    }
+}
+@media screen and (min-width: 620px) and (max-width: 959px){
+    main {
+        grid-template: auto / 2fr 2fr 2fr;
+        grid-template-areas:
+            "teaching research me"
+            "books photos contact";
+        grid-gap: 1.5em;
+    }
+    header {
+        margin-bottom: 0.8em;
+        font-size: var(--mid-title-size);
+    }
+    footer {
+        grid-template-columns: 1fr 2fr;
+    }
+    .sectionHeader {
+        font-size: var(--mid-sectionHeader-size);
+    }
+    .contactLogo {
+        width: 55px;
+        height: 55px;
+    }
+}
+@media screen and (min-width: 960px){
+    main {
+        grid-template: auto / 2fr 2fr 2fr;
+        grid-template-areas:
+            "teaching research me"
+            "books photos contact";
+        grid-gap: 1.5em;
+    }
+    header {
+        margin-bottom: 1em;
+        font-size: var(--max-title-size);
+    }
+    footer {
+        grid-template-columns: 1fr 2fr;
+    }
+    .sectionHeader {
+        font-size: var(--max-sectionHeader-size);
+    }
+    .contactLogo {
+        width: 88px;
+        height: 88px;
+    }
+}
+
+@media screen and (max-width: 469px) {
+    #mainNormal {
+        grid-gap: 1.2em;
+    }
+    #mainPhoto {
+        display: grid;
+        grid-gap: 1.2em;
+        margin: 10px auto 10px auto;
+    }
+    #articlePhoto {
+        grid-gap: 1.2em;
+        margin: 18px auto 18px auto;
+    }
+    .sectionPhoto {
+        grid-gap: 1em;
+    }
+    header {
+        font-size: var(--min-title-size);
+    }
+    footer {
+        grid-template-rows: 1fr 1fr;
+    }
+    nav {
+        flex-wrap: wrap;
+    }
+    .sectionHeader {
+        font-size: var(--min-sectionHeader-size);
+    }
+    .textMenu {
+        display: none;
+    }
+}
+@media screen and (min-width: 470px) and (max-width: 599px){
+    #mainNormal {
+        grid-gap: 1.2em;
+    }
+    header {
+        font-size: var(--min-title-size);
+    }
+    #articlePhoto {
+        grid-gap: 1.2em;
+        margin: 18px auto 18px auto;
+    }
+    .sectionPhoto {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1em;
+    }    
+    .sectionHeader {
+        font-size: var(--min-sectionHeader-size);
+    }
+    #sectionHeaderPhoto {
+        grid-column: span 2;
+    }
+    .textMenu {
+        display: none;
+    }
+    footer {
+        grid-template-rows: 1fr 1fr;
+    }    
+}
+@media screen and (min-width: 600px) and (max-width: 959px){
+    #mainNormal {
+        grid-gap: 1.5em;
+    }
+    #articlePhoto {
+        grid-gap: 1.5em;
+        margin: 22px auto 22px auto;
+    }
+    .sectionPhoto {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.2em;
+    }
+
+    header {
+        font-size: var(--mid-title-size);
+    }
+    footer {
+        grid-template-columns: 1fr 2fr;
+    }
+    .sectionHeader {
+        font-size: var(--mid-sectionHeader-size);
+    }
+    .sectionPhoto {
+        grid-template-columns: repeat(3,2fr);
+        grid-gap: 1.5em;
+    }
+    #sectionHeaderPhoto {
+        grid-column: span 3;
+    }
+}
+@media screen and (min-width: 960px){
+    #mainNormal {
+        grid-template: auto / 3fr 1.5fr;
+        grid-gap: 1.5em;
+    }
+    #articlePhoto {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5em;
+    }
+    .sectionPhoto {
+        grid-template-columns: repeat(3,2fr);
+        grid-gap: 1.5em;
+    }
+    header {
+        font-size: var(--max-title-size);
+    }
+    footer {
+        grid-template-columns: 1fr 2fr;
+    }    
+    .sectionHeader {
+        font-size: var(--max-sectionHeader-size);
+    }
+    #sectionHeaderPhoto {
+        grid-column: span 3;
+    }
+}
