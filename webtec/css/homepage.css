@@ -1,26 +1,22 @@
-header{
+header{ /* หัวของ homepage  */
+
     border-bottom: 0.1rem solid #DCDEDD;
     margin: 5px;
     font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
 }
 
-
-
-article{
+article{ 
     display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 500px  ;
     grid-gap:10px;
-    
 }
 
-section{
+section{ 
     font-size: 1em;
     border:2px solid #DCDEDD;
 }
 
-footer{
+footer{ 
     font-size: 1em;
     line-height:50px;
     margin:5px 5px;
@@ -28,12 +24,12 @@ footer{
    
     text-align: center;
 }
-
-@media screen and (max-width: 450px) {
+/* ปรับขนาดส่วนของ homepage ตามขนาดหน้าจอ  */
+@media screen and (max-width: 450px) { /* เรียงเป็นเเถวเดียว ลงมา  */
    
 
-    article{
-        display: grid;
+    article{     
+        
         grid-template-columns: 1fr ;
         grid-template-rows: 200px  ;
         grid-gap:10px;
@@ -51,9 +47,9 @@ footer{
 
     
 }
-@media screen and (min-width: 451px) and (max-width: 850px){
+@media screen and (min-width: 451px) and (max-width: 850px){ /* เรียงเป็น 2 columns */
     article{
-        display: grid;
+       
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 300px  ;
         grid-gap:5px;
@@ -72,9 +68,9 @@ footer{
     }
     
 }
-    @media screen and (min-width: 850px) {
+    @media screen and (min-width: 850px) { /* เพิ่มขนาดของรูป  */
     article{
-        display: grid;
+        
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 500px  ;
         grid-gap:10px;

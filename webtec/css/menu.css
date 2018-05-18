@@ -1,11 +1,11 @@
 
-nav{
+nav{ /* ส่วนของเมนู  */
     
     border-bottom: 0.1rem solid #DCDEDD;
     font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif ;
     
 }
-#id03 a
+#id03 a /* ปรับสีของเมนูในทุกหน้า  */
 {
   
     margin-right: 2.4rem;
@@ -26,8 +26,8 @@ footer{
 
 
 
-
-@media screen and (max-width: 450px) {
+/* ปรับขนาดของเมนู ตามสัดส่วนหน้าจอ  */
+@media screen and (max-width: 450px) { /* เรียงเมนูเป็น columns ลงมา  */
    nav{
     display:grid;
     margin:10.5px;
@@ -50,9 +50,8 @@ footer{
        }
     
 }
-    @media screen and (min-width: 850px) {
-        nav{grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 200px  ;
+    @media screen and (min-width: 850px) { /* ที่ส่วนของเมนูเรียงเป็นเเถวเดียวเพราะไม่มีการใช้ grid  */
+        nav{
             margin:10.5px;
             padding: 10px 5px;
             font-size: 1.0em ;

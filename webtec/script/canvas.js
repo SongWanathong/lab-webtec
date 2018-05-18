@@ -1,7 +1,7 @@
 
 
 
-    
+    // ฟังชั่นการสร้าง นาฬิกา จากเเล็ป
     
     var canvas = document.querySelector(`#myClock`),
     canvasElement = canvas.getContext(`2d`),
@@ -17,31 +17,32 @@
     initTime();
     drawClock();
     setInterval(animateClock,1000);
-    function initTime(){
+    
+    function initTime(){ //ฟังชั่นดึงเวลาปัจจุปันมาใช้
         date = new Date();
         hours = date.getHours() % 12;
         minutes = date.getMinutes();
         seconds = date.getSeconds();
     }
-    function animateClock(){
+    function animateClock(){ //การเคลื่อนไหวของนาฬิกา
         clearCanvas();
         refreshTime();
         drawClock();
     }
 
-    function clearCanvas(){
+    function clearCanvas(){ //เมื่อมีการวาดเข็มหน้าปัดจะทำการลบเข็มหน้าปัดเดิมทิ้ง
         canvasElement.clearRect(0,0, canvas.width,canvas.height);
 
     }
 
 
-    function refreshTime(){
+    function refreshTime(){ //ทุกๆหนึ่งวิจะ refresh
         seconds += 1;
         if(Math.floor((seconds /60)) !=0){ minutes += 1;seconds %=60;}
         if(Math.floor((minutes /60)) !=0){ hours += 1;minutes %=60;}
     }
 
-    function drawClock(){
+    function drawClock(){ //วาดนาฬิกา
         drawClockBackground();
         drawMinutesHand();
         drawHoursHand();
@@ -50,7 +51,7 @@
         
     }
 
-    function drawHand(beginX,beginY,endX,endY){
+    function drawHand(beginX,beginY,endX,endY){ //วาดเข็มนาฬิกา
         canvasElement.beginPath();
         canvasElement.moveTo(beginX,beginY);
         canvasElement.lineTo(endX,endY);
@@ -58,7 +59,7 @@
         canvasElement.closePath();
     }
 
-    function drawSecHand(){
+    function drawSecHand(){ //วาดเข็มวินาที
         var rotationUnit = seconds*2 ,
         rotationFactor = Math.PI/60,
             rotation =rotationUnit * rotationFactor,
@@ -68,7 +69,7 @@
             drawHand(cX,cY,endX,endY);
     }
 
-    function drawMinutesHand(){
+    function drawMinutesHand(){//วาดเข็มนาที
         var rotationUnit = minutes + seconds / 60,
         rotationFactor = Math.PI/30,
             rotation =rotationUnit * rotationFactor,
@@ -79,7 +80,7 @@
     }
     
 
-    function drawHoursHand(){
+    function drawHoursHand(){ //วาดเข็มชัวโมง
         var rotationUnit= 5* hours + minutes /12,
         rotationFactor = Math.PI /30,
         rotation = rotationUnit * rotationFactor,
@@ -89,7 +90,7 @@
         drawHand(cX,cY,endX,endY);
 
     }
-    function drawClockBackground(){
+    function drawClockBackground(){ //วาดเส้นนาฬิกา
         var correction = 1 / 300,
         shiftUnit = 1/170,
         shifFactor = 1/30,
@@ -112,7 +113,7 @@
 
     }
 
-     function drawArcAtPosition(cX,cY,redius,startAngle,endAngle,counterClockwise,lineWidth){
+     function drawArcAtPosition(cX,cY,redius,startAngle,endAngle,counterClockwise,lineWidth){ //กำหรดตำเเหน่งเส้น
          canvasElement.beginPath();
          canvasElement.arc(cX,cY,redius,startAngle,endAngle,counterClockwise);
          canvasElement.lineWidth=lineWidth;
@@ -125,12 +126,12 @@
 
      }
 
-    function drawLittleCircle(cX,cY){
+    function drawLittleCircle(cX,cY){ //วงกลมตรงกลาง
         drawArcAtPosition(cX,cY,4,0 * Math.PI,2 * Math.PI,false,4);
 
     }
     
-    function drawNumbers(){
+    function drawNumbers(){ //ตัวเลข
         var ang;
         var Number;
         canvasElement.font = radius*0.25 +"px arial";

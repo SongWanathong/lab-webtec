@@ -1,17 +1,15 @@
 
 
-
+/* หน้า CV */ 
 main{
   display:grid;
-  grid-template-columns: 0.3fr 1fr ;
-  margin-left: 5.5em;
+  margin-top: 50px;
+ 
 }
 
 article{
     display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 250px  ;
-    grid-gap:10px;
+   
 }
 section{
     font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -20,64 +18,41 @@ section{
     
     padding: 5px;
 }
-h3{
+h3{   /* ชื่อหัวข้อใน CV */ 
     color: #348f2c;
 }
 
+@media screen and (max-width: 450px) {  /* เรียงเป็น columns ลงมาเเถวเดียว  */ 
 
-#id01 section:nth-child(1)
-{   margin: 5px;
-    padding: 2px;
-    width: 250px;
-    height:350px;
-    
-}
-#id01 section:nth-child(2)
-{
-    width: 400px;
-    height:450px;
-    text-align: center;
-    line-height: 1;
-}
-
-
-@media screen and (max-width: 450px) {
-
-    main{
-       
+    main{                                
         grid-template-columns: 1fr ;
         margin-left: 2.5em;
-        
       }
-      
       article{
-          
           grid-template-columns: 1fr  ;
-          
       }
-
 }
-
-
-    @media screen and (min-width: 451px) and (max-width: 850px){
-  
-
+    @media screen and (min-width: 451px) and (max-width: 850px){/* ทำให้มีสอง columns เมือขนาด 451 px ถึง 850 px */ 
         main{
-       
             grid-template-columns: 1fr 1fr;
             margin-left: 1.5em;
-            grid-gap: 10px
-            
+            grid-gap: 10px 
           }
           
           article{
-              
               grid-template-columns: 1fr   ;
-              
           }
-        
 }
-@media screen and (max-width: 850px) {
-  
+@media screen and (min-width: 850px) {/* 850 px ขึ้นไป ปรับขนาดให้เหมาะสม ใน columns ที่สองเรียงเป็นสอง columns */ 
+main{
+    grid-template-columns: 0.3fr 1fr ;
+    margin-left: 5.5em;
+  }
+article{
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 250px  ;
+    grid-gap:10px;
 }
+}
+
 
