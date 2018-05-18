@@ -1,0 +1,60 @@
+
+nav{ /* ส่วนของเมนู  */
+    
+    border-bottom: 0.1rem solid #DCDEDD;
+    font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif ;
+    
+}
+#id03 a /* ปรับสีของเมนูในทุกหน้า  */
+{
+  
+    margin-right: 2.4rem;
+    color: #9B9E9E;
+    font-size: 1.6rem;
+    
+}
+
+footer{
+    font-size: 1em;
+    line-height:50px;
+    margin-top:50px;
+    padding:10px;
+    text-align: center;
+    margin-left: 2em;
+    
+}
+
+
+
+/* ปรับขนาดของเมนู ตามสัดส่วนหน้าจอ  */
+@media screen and (max-width: 450px) { /* เรียงเมนูเป็น columns ลงมา  */
+   nav{
+    display:grid;
+    margin:10.5px;
+    padding: 10px 5px;
+    font-size: 0.5 em ;
+  
+    
+   }
+
+
+    
+}
+@media screen and (min-width: 451px) and (max-width: 850px){
+    nav{display:grid;
+    
+        margin:10.5px;
+        padding: 10px 5px;
+        font-size: 0.7em ;
+       
+       }
+    
+}
+    @media screen and (min-width: 850px) { /* ที่ส่วนของเมนูเรียงเป็นเเถวเดียวเพราะไม่มีการใช้ grid  */
+        nav{
+            margin:10.5px;
+            padding: 10px 5px;
+            font-size: 1.0em ;
+            line-height: 1;
+           }
+}
