@@ -51,7 +51,7 @@
 
 
   
-  @media  only screen and (min-width: 320px) and   (max-width: 480px) {  /* เรียงเป็น columns ลงมาเเถวเดียว  */ 
+  @media  (max-width: 480px) {  /* เรียงเป็น columns ลงมาเเถวเดียว  */ 
   
       .mainCV{                                
           grid-template-columns: 1fr  ;
@@ -99,8 +99,8 @@
 
 
   }
-  @media only screen and (min-width: 451px) and (max-width: 850px){/* ทำให้มีสอง columns เมือขนาด 451 px ถึง 850 px */ 
-      .mainCV{
+  @media only screen and (min-width: 451px) and (max-width: 850px){
+      .mainCV{ /* ทำให้มีสอง columns เมือขนาด 451 px ถึง 850 px */ 
               grid-template-columns: 1fr 1fr;
               margin-left: 1.5em;
               grid-gap: 10px 
@@ -128,7 +128,7 @@
           grid-template-columns: 0.3fr 1fr ;
           margin-left: 2.5em;
         }
-        #articleCV{
+        #articleCV{/*  ใน columns ที่สองเรียงเป็นสอง columns */ 
             grid-template-columns: 1fr 1fr  ;
         }
         

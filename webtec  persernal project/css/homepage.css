@@ -26,7 +26,7 @@ footer{
     text-align: center;
 }
 /* ปรับขนาดส่วนของ homepage ตามขนาดหน้าจอ  */
-@media  only screen and (min-width: 320px) and   (max-width: 480px) { /* เรียงเป็นเเถวเดียว ลงมา  */
+@media     (max-width: 480px) { /* เรียงเป็นเเถวเดียว ลงมา  */
    
 
    article{     
