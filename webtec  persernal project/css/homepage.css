@@ -9,6 +9,7 @@ header{ /* หัวของ homepage  */
 article{ 
     display: grid;
     grid-gap:10px;
+    grid-template-columns: 1fr 1fr;
 }
 
 section{ 
@@ -25,13 +26,13 @@ footer{
     text-align: center;
 }
 /* ปรับขนาดส่วนของ homepage ตามขนาดหน้าจอ  */
-@media screen and (max-width: 450px) { /* เรียงเป็นเเถวเดียว ลงมา  */
+@media  only screen and (min-width: 320px) and   (max-width: 480px) { /* เรียงเป็นเเถวเดียว ลงมา  */
    
 
-    article{     
+   article{     
         
         grid-template-columns: 1fr ;
-        grid-template-rows: 200px  ;
+        grid-template-rows: 200px 200px  ;
         grid-gap:10px;
         
     }
@@ -47,7 +48,7 @@ footer{
 
     
 }
-@media screen and (min-width: 451px) and (max-width: 850px){ /* เรียงเป็น 2 columns */
+@media only screen and (min-width: 451px) and (max-width: 850px){ /* เรียงเป็น 2 columns */
     article{
        
         grid-template-columns: 1fr 1fr;
@@ -68,8 +69,8 @@ footer{
     }
     
 }
-    @media screen and (min-width: 850px) { /* เพิ่มขนาดของรูป  */
-    article{
+    @media  only  screen and  (min-width: 851px) { /* เพิ่มขนาดของรูป  */
+   article{
         
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 500px  ;

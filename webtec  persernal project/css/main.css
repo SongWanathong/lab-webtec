@@ -1,0 +1,150 @@
+
+
+/* หน้า CV */ 
+.mainCV{
+    display:grid;
+   
+  }
+  
+  #articleCV{
+      display: grid;
+      grid-gap: 10px;
+     
+  }
+  .sectionCV{
+      font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      border: solid #f3a734;
+      box-shadow: 4px 4px 4px #0e559c98;
+      padding: 5px;
+  }
+  h3{   /* ชื่อหัวข้อใน CV */ 
+      color: #348f2c;
+  }
+  
+  
+
+
+  /* หน้าที่ใช้ javascript  */
+
+.mainjs{  
+    display: grid;
+    grid-gap: 1rem;
+}
+#articlejs{
+   display: grid;
+   grid-template-columns: 1fr  ;
+}
+.sectionjs{
+    font-size: 1em;
+    padding:10px;
+    margin: 10px;
+    line-height: 2;
+}
+#asidejs{   /* ตำเเหน่งที่ javascript อยู่ */
+    display: grid;
+    font-size: 1em;
+    margin:5px 5px;
+    padding: 10px;
+}
+
+
+
+
+  
+  @media  only screen and (min-width: 320px) and   (max-width: 480px) {  /* เรียงเป็น columns ลงมาเเถวเดียว  */ 
+  
+      .mainCV{                                
+          grid-template-columns: 1fr  ;
+        
+        }
+        #articleCV{
+            grid-template-columns: 1fr  ;
+        }
+        img{
+          margin-left: 2.5em;
+        }
+
+
+
+        .mainjs{ 
+            grid-template-columns:1fr ;
+        }
+    #articlejs{
+        
+        grid-template-columns: 0.5fr  ;
+     }
+    .sectionjs{
+        font-size: 0.7em;
+    }
+        .imgjs /* ปรับขนาดรูปภาพ  */
+    {
+        width: 300px; 
+        height:200px;
+    }
+    #asidejs{   /* ตำเเหน่งที่ javascript อยู่ */
+        grid-template-columns:1fr;
+        margin-right: 15.5em;
+      
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+  }
+  @media only screen and (min-width: 451px) and (max-width: 850px){/* ทำให้มีสอง columns เมือขนาด 451 px ถึง 850 px */ 
+      .mainCV{
+              grid-template-columns: 1fr 1fr;
+              margin-left: 1.5em;
+              grid-gap: 10px 
+            }
+            
+            #articleCV{
+                grid-template-columns: 1fr   ;
+            }
+
+
+
+
+
+            .mainjs{
+                grid-template-columns:1fr ;
+            }
+            .imgjs/* ปรับขนาดรูปภาพ  */
+        {
+            width: 400px; 
+            height:250px;
+        }
+  }
+  @media  only  screen and  (min-width: 851px){/* 850 px ขึ้นไป ปรับขนาดให้เหมาะสม ใน columns ที่สองเรียงเป็นสอง columns */ 
+      .mainCV{                                
+          grid-template-columns: 0.3fr 1fr ;
+          margin-left: 2.5em;
+        }
+        #articleCV{
+            grid-template-columns: 1fr 1fr  ;
+        }
+        
+        .mainjs{
+            grid-template-columns:3fr 1fr ;
+        }
+        
+        .imgjs /* ปรับขนาดรูปภาพ  */
+        {
+            width: 700px; 
+            height:500px;
+        }
+  }
+  
+  
+  
+  
+  
+  
